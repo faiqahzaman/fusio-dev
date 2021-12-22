@@ -1,0 +1,25 @@
+version: 1
+scopes: ["customer"]
+methods:
+  GET:
+    public: true
+    description: "Returns a single Customer"
+    responses: 
+      200: "App\\Model\\Customer"
+      500: "App\\Model\\Message"
+    action: "App\\Action\\Customer\\Get"
+  PUT:
+    public: false
+    description: "Updates a single Customer"
+    request: "App\\Model\\Customer"
+    responses:
+      200: "App\\Model\\Message"
+      500: "App\\Model\\Message"
+    action: "App\\Action\\Customer\\UpdateCustomer"
+  DELETE:
+    public: false
+    description: "Removes a specific Customer"
+    responses: 
+      200: "App\\Model\\Message"
+      500: "App\\Model\\Message"
+    action: "App\\Action\\Customer\\DeleteCustomer"

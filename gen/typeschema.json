@@ -1,0 +1,157 @@
+{
+  "definitions": {
+    "Collection": {
+      "description": "A collection of things",
+      "type": "object",
+      "properties": {
+        "totalResults": {
+          "type": "integer"
+        },
+        "entry": {
+          "type": "array",
+          "items": {
+            "$generic": "T"
+          }
+        }
+      }
+    },
+    "Message": {
+      "description": "Contains a message whether the operation was successful or not",
+      "type": "object",
+      "properties": {
+        "success": {
+          "type": "boolean"
+        },
+        "message": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        }
+      }
+    },
+    "Page": {
+      "description": "A specific page",
+      "type": "object",
+      "properties": {
+        "refId": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "insertDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "Page_Collection": {
+      "description": "A collection of all pages",
+      "$ref": "Collection",
+      "$template": {
+        "T": "Page"
+      }
+    },
+    "Page_Query": {
+      "description": "Query parameters for a page",
+      "type": "object",
+      "properties": {
+        "refId": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        }
+      }
+    },
+    "Post": {
+      "description": "A specific post",
+      "type": "object",
+      "properties": {
+        "refId": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "insertDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "Post_Collection": {
+      "description": "A collection of posts",
+      "$ref": "Collection",
+      "$template": {
+        "T": "Post"
+      }
+    },
+    "Post_Query": {
+      "description": "Query parameters for a post",
+      "type": "object",
+      "properties": {
+        "refId": {
+          "type": "integer"
+        },
+        "title": {
+          "type": "string"
+        },
+        "summary": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        }
+      }
+    },
+    "Comment": {
+      "description": "A specific comment",
+      "type": "object",
+      "properties": {
+        "refId": {
+          "type": "integer"
+        },
+        "content": {
+          "type": "string"
+        },
+        "insertDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "Comment_Collection": {
+      "description": "A collection of comments",
+      "$ref": "Collection",
+      "$template": {
+        "T": "Comment"
+      }
+    },
+    "Comment_Query": {
+      "description": "Query parameters for a comment",
+      "type": "object",
+      "properties": {
+        "refId": {
+          "type": "integer"
+        },
+        "content": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+"/page": !include resources/routes/page/collection.yaml
+"/page/:page_id": !include resources/routes/page/entity.yaml
+"/post": !include resources/routes/post/collection.yaml
+"/post/:post_id": !include resources/routes/post/entity.yaml
+"/comment": !include resources/routes/comment/collection.yaml
+"/comment/:comment_id": !include resources/routes/comment/entity.yaml
+"/customer": !include resources/routes/customer/collection.yaml
+"/customer/:kpbaru" : !include resources/routes/customer/entity.yaml
+
+#fusio example
+#"/contract": !include resources/routes/Contract/collection.yaml
+#"/contract/:contract": !include resources/routes/Contract/entity.yaml
+#"/customer": !include resources/routes/Customer/collection.yaml
+#"/customer/:customer": !include resources/routes/Customer/entity.yaml
+#"/group": !include resources/routes/Group/collection.yaml
+#"/group/:group": !include resources/routes/Group/entity.yaml
+#"/product": !include resources/routes/Product/collection.yaml
+#"/product/:product": !include resources/routes/Product/entity.yaml

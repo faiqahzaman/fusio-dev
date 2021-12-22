@@ -1,0 +1,18 @@
+version: 1
+scopes: ["customer"]
+methods:
+  GET:
+    public: true
+    description: "Returns all available customer"
+    responses: 
+      200: "App\\Model\\Customer_Collection"
+      500: "App\\Model\\Message"
+    action: "App\\Action\\Customer\\showAllCustomers"
+  POST:
+    public: false
+    description: "Creates a new customer"
+    request: "App\\Model\\Customer"
+    responses: 
+      201: "App\\Model\\Message"
+      500: "App\\Model\\Message"
+    action: "App\\Action\\Customer\\CreateCustomer"
