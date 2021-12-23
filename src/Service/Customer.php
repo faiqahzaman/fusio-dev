@@ -142,7 +142,7 @@ class Customer
                                     $customer->gettagperingatan(), 
                                     $customer->getnamateller(), 
                                     $customer->getkumpulan(), 
-                                    $customer->gettelefon2(), 
+                                    $customer->gettelefon2(),
                                     $customer->gettagpelanggan()
             );
 
@@ -185,7 +185,9 @@ class Customer
     //validation for each column
     private function assertCustomer(Model\Customer $customer)
     {
+        
         $kpbaru = $customer->getkpbaru();
+        
         if ($kpbaru === null) {
             throw new StatusCode\BadRequestException('No kpbaru provided');
         }

@@ -42,7 +42,7 @@ class Customer
                             string $alamat3, 
                             string $alamat4, 
                             string $poskod, 
-                            string $koddaerah, 
+                            int $koddaerah, 
                             string $kodnegeri, 
                             string $telefon, 
                             string $jumpinjaman, 
@@ -66,7 +66,7 @@ class Customer
                             string $nopelangganlama, 
                             string $tujuangadai, 
                             string $kodkerjabaru, 
-                            string $tagperingatan, 
+                            int $tagperingatan, 
                             string $namateller, 
                             int $kumpulan, 
                             string $telefon2, 
@@ -165,9 +165,9 @@ class Customer
                             string $tagperingatan, 
                             string $namateller, 
                             int $kumpulan,
-                            string $telefon2, 
-                            string $tagpelanggan)
-                            : int
+                            string $telefon2,
+                            string $tagpelanggan
+                            ): int
     {
         $this->connection->update('customer', [
             'ahli' => $ahli,
